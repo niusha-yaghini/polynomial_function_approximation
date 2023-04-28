@@ -1,17 +1,16 @@
 import matplotlib.pyplot as plt
 import tree
 
-def result(tree, list_x):    
+def result(t, list_x):    
     trees_y = []
     for single_x in list_x:
         flag = False
-        t_y = tree.calculator(tree.root, single_x, flag)
+        t_y = tree.calculator(t.root, single_x, flag)
         if(flag==True or t_y>100000 or t_y<-100000):
             t_y = 100000
 
         trees_y.append(t_y)
     return trees_y
-    
 
 def print_func(list_x, actual_y, predicted_tree, actual_f, predicted_f, photo_number):
 

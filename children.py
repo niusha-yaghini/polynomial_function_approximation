@@ -149,7 +149,6 @@ def make_list_node_leaf(root, leaf_nodes):
                 
     return leaf_nodes
 
-
 def mutation_leaf(children, pm):
     for child in children:
         x = rnd.random()
@@ -163,9 +162,7 @@ def mutation_leaf(children, pm):
             
             change_node(child.root, choosed_node)
             
-            child.print_tree()
-         
-         
+            child.print_tree()        
           
 def making_children(parent_trees, k, pc, pm):
     # we want to make children on base of a list of trees (parent_trees)
@@ -181,6 +178,6 @@ def making_children(parent_trees, k, pc, pm):
         children.append(child1)
         children.append(child2)
     
-    mutation(children, pm)
+    mutation_leaf(children, pm)
     
     return children

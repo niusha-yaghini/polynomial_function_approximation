@@ -85,8 +85,11 @@ class Tree:
    
     def to_math_string(self, node):
         if(node.is_leaf):
-            x = format({node.operator}, ".2f")
-            return f"{x}"
+            if(node.operator!='x'):
+                a = format(float(node.operator), ".2f")
+                return f"{a}"
+            else:
+                return f"{node.operator}"
         else:
             if(len(node.children)) == 1:
                 return f"{node.operator}{self.to_math_string(node.children[0])}"

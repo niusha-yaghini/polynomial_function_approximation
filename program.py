@@ -5,18 +5,18 @@ import print_function
 
 if __name__ == "__main__":
     
-    photo_number = 11
+    photo_number = 12
     
     # parameters
     amount = 100
 
     # population size (0)
-    amount_of_trees = 50
+    amount_of_trees = 100
     max_depth = 12
 
     k = 3 # k tournoment parameter
-    pc = 0.9 # the probblity of cross-over
-    pm = 0.5 # the probblity of mutation
+    pc = 0.8 # the probblity of cross-over
+    pm = 0.8 # the probblity of mutation
 
     amount_of_generations = 50
     
@@ -81,11 +81,11 @@ if __name__ == "__main__":
     plt.savefig(name)
     plt.show()
     
-    print()
+    # print()
 
     print_function.print_func(X, Y, final_best_tree, given_function, final_best_tree.in_order, photo_number)
     
-    print()
+    # print()
     
     fig, ax = plt.subplots()
     average_of_each, = plt.plot(x_generation_number, y_average_of_each, label='average of each generation')
