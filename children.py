@@ -101,6 +101,7 @@ def tournament(p_trees, k):
     return couple_parent[0], couple_parent[1]       
         
 def change_node(root, choosed_node):
+
     queue = []
     queue.append(root)
         
@@ -135,6 +136,36 @@ def mutation(children, pm):
             change_node(child.root, choosed_node)
             
             child.print_tree()
+         
+def make_list_node_leaf(root, leaf_nodes):
+    # making a list of leaf nodes in our tree
+    
+    if(root.is_leaf==True):
+        leaf_nodes.append(root)
+
+    if(len(root.children)!=0):
+        for i in root.children:
+            make_list_node(i, leaf_nodes)
+                
+    return leaf_nodes
+
+
+def mutation_leaf(children, pm):
+    for child in children:
+        x = rnd.random()
+        if(x<=pm):
+
+            leaf_nodes = []
+            make_list_node_leaf(child.root, leaf_nodes)
+            
+            # choosing a node to change
+            choosed_node = rnd.choice(leaf_nodes)
+            
+            change_node(child.root, choosed_node)
+            
+            child.print_tree()
+         
+         
           
 def making_children(parent_trees, k, pc, pm):
     # we want to make children on base of a list of trees (parent_trees)
@@ -150,6 +181,6 @@ def making_children(parent_trees, k, pc, pm):
         children.append(child1)
         children.append(child2)
     
-    # mutation(children, pm)
+    mutation(children, pm)
     
     return children

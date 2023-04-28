@@ -85,7 +85,8 @@ class Tree:
    
     def to_math_string(self, node):
         if(node.is_leaf):
-            return f"{node.operator}"
+            x = format({node.operator}, ".2f")
+            return f"{x}"
         else:
             if(len(node.children)) == 1:
                 return f"{node.operator}{self.to_math_string(node.children[0])}"
@@ -125,7 +126,6 @@ def calculator(root, x, flag):
         left_val = calculator(root.children[0], x, flag)
         right_val = calculator(root.children[1], x, flag)
 
-
         if (root.operator == '+'):
             return left_val + right_val
         elif (root.operator == '-'):
@@ -137,27 +137,16 @@ def calculator(root, x, flag):
                 flag = True
                 return 1
             else:
-                return left_val**right_val
-                # if(right_val==0):
-                #     return 1
-                # x = 1
-                # i = 0
-                # while(not flag and i<right_val):
-                #     x = x*left_val
-                #     i+=1
-                #     if(x>100000 or x<-100000):
-                #         flag = True
-                #         return 1
-                # return x
+                try:
+                    return left_val**right_val
+                except:
+                    print()
         
 def mean_abs_error(actual_y, predicted_y):
     amount = len(predicted_y)
     sum = 0
     for i in range(amount):
         sum += abs(predicted_y[i]-actual_y[i])
-        # sum+=a
-        # print("actual y =", format(actual_y[i], ".2f"), "predicted y =", format(predicted_y[i], ".2f"), "mae is =", format(a, ".2f"))
-
     return sum/amount
         
 def _mae(tree, list_x, list_y):
@@ -172,11 +161,7 @@ def _mae(tree, list_x, list_y):
 
         trees_y.append(t_y)
 
-    # print(tree.in_order)
     mae = mean_abs_error(list_y, trees_y)
-    # print()
-    # if(mae<0.00001):
-    #     mae = 0
     return mae
 
 def calculating_mae(tree_list, X, Y):

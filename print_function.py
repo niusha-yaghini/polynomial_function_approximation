@@ -1,18 +1,31 @@
-import numpy as np
-from matplotlib import pyplot as plt
+import matplotlib.pyplot as plt
+import tree
 
-plt.rcParams["figure.figsize"] = [7.50, 3.50]
-plt.rcParams["figure.autolayout"] = True
+def result(tree, list_x):    
+    trees_y = []
+    for single_x in list_x:
+        flag = False
+        t_y = tree.calculator(tree.root, single_x, flag)
+        if(flag==True or t_y>100000 or t_y<-100000):
+            t_y = 100000
 
-def f1(x):
-    return 4*(x**4) + 3*(x**3) + 2*(x**2) + x
-
-# def f2(x):
+        trees_y.append(t_y)
+    return trees_y
     
 
-x = np.linspace(-10, 10, 100)
+def print_func(list_x, actual_y, predicted_tree, actual_f, predicted_f, photo_number):
 
-plt.plot(x, f1(x), color='red')
-# plt.plot(x, f2(x), color='blue')
+    predicted_y = result(predicted_tree, list_x)
 
-plt.show()
+    fig, ax = plt.subplots()
+    actual_function,  = plt.plot(list_x, actual_y, label='actual function')
+    predicted_function, = plt.plot(list_x, predicted_y, label='predicted function')
+
+    ax.set_title(f"actual function: {actual_f}, predicted function: {predicted_f}")
+    ax.legend(handles=[actual_function, predicted_function])
+    name = f"exact_function_{photo_number}_" + '.png'
+
+    plt.savefig(name)
+    plt.show()
+    
+    print()
