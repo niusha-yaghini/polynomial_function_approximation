@@ -192,7 +192,7 @@ def calculating_mae(tree_list, X, Y):
         if (t.mae<best_mae):
             best_mae = t.mae
             best_tree = t
-        print(f"tree number {i} = {t.in_order} and its mae is = {t.mae}")
+        # print(f"tree number {i} = {t.in_order} and its mae is = {t.mae}")
         i += 1
 
     return mae_sum/i, best_mae, best_tree

@@ -13,20 +13,21 @@ if __name__ == "__main__":
     # parameters
     amount = 100
 
-    amount_of_trees = 100
+    # population size (0)
+    amount_of_trees = 200
     max_depth = 6
 
     k = 3 # k tournoment parameter
     pc = 0.5 # the probblity of cross-over
     pm = 0.5 # the probblity of mutation
 
-    amount_of_generations = 20
+    amount_of_generations = 100
     
     # power_domain = (0.25, 4)
     # power_rate = 0.25
     
     # using domain
-    f = open('in_out1.txt', 'r')
+    f = open('in_out2.txt', 'r')
     given_function = f.readline().split(':')[1]
     X = []
     Y = []
@@ -45,8 +46,10 @@ if __name__ == "__main__":
     x_generation_number = []
     y_average_of_each = []
     y_best_mae_of_each = []
-    y_best_of_all = []
+    y_best_mae_of_all = []
     y_best_tree = []
+    
+    # y_last_best = 0
     
     for i in range(amount_of_generations):
     
@@ -58,8 +61,9 @@ if __name__ == "__main__":
         x_generation_number.append(i)
         y_best_tree.append(best_tree)
         y_best_mae_of_each.append(best_mae)
-        y_best_of_all.append(min(y_best_mae_of_each))
+        y_best_mae_of_all.append(min(y_best_mae_of_each))
         y_average_of_each.append(average_mae)
+
 
     final_best_tree = None
     mae = float('inf')
@@ -71,13 +75,15 @@ if __name__ == "__main__":
     fig, ax = plt.subplots()
     # plt.figure(figsize=(10,6))
     best_of_each,  = plt.plot(x_generation_number, y_best_mae_of_each, label='best of this generation')
-    best_of_all, = plt.plot(x_generation_number, y_best_of_all, label='best of all generations since now')
+    best_of_all, = plt.plot(x_generation_number, y_best_mae_of_all, label='best of all generations since now')
 
-    ax.set_title(f"function: {given_function} population: {amount_of_trees}, amount_of_generations: {amount_of_generations} , my genetic believes: {final_best_tree.in_order}")
+    # ax.text("last predicted y: ", min(y_best_of_all))
+    ax.set_title(f"function: {given_function}, population: {amount_of_trees}, amount_of_generations: {amount_of_generations} , my genetic believes: {final_best_tree.in_order}")
     ax.legend(handles=[best_of_each, best_of_all])
-    name = "result_3_" + str(amount_of_trees) + '.png'
+    name = "result_5_" + str(amount_of_trees) + '.png'
 
     print("the function that my genetic believes: ", final_best_tree.in_order)
+    print("best mae: ", min(y_best_mae_of_all))
 
     plt.savefig(name)
     plt.show()
@@ -88,7 +94,7 @@ if __name__ == "__main__":
     average_of_each, = plt.plot(x_generation_number, y_average_of_each, label='average of each generation')
     ax.set_title(f"function = {given_function}, population = {amount_of_trees}")
     ax.legend(handles=[average_of_each])
-    name = "average_2_" + str(amount_of_trees) + '.png'
+    name = "average_4_" + str(amount_of_trees) + '.png'
 
     plt.savefig(name)
     plt.show()
