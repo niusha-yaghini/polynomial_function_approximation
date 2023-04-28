@@ -150,6 +150,6 @@ def making_children(parent_trees, k, pc, pm):
         children.append(child1)
         children.append(child2)
     
-    mutation(children, pm)
+    # mutation(children, pm)
     
     return children

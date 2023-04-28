@@ -21,7 +21,9 @@ if __name__ == "__main__":
     pm = 0.5 # the probblity of mutation
 
     amount_of_generations = 20
-
+    
+    # power_domain = (0.25, 4)
+    # power_rate = 0.25
     
     # using domain
     f = open('in_out1.txt', 'r')
@@ -73,7 +75,7 @@ if __name__ == "__main__":
 
     ax.set_title(f"function: {given_function} population: {amount_of_trees}, amount_of_generations: {amount_of_generations} , my genetic believes: {final_best_tree.in_order}")
     ax.legend(handles=[best_of_each, best_of_all])
-    name = "result_1_" + str(amount_of_trees) + '.png'
+    name = "result_3_" + str(amount_of_trees) + '.png'
 
     print("the function that my genetic believes: ", final_best_tree.in_order)
 
@@ -86,7 +88,7 @@ if __name__ == "__main__":
     average_of_each, = plt.plot(x_generation_number, y_average_of_each, label='average of each generation')
     ax.set_title(f"function = {given_function}, population = {amount_of_trees}")
     ax.legend(handles=[average_of_each])
-    name = "average_1_" + str(amount_of_trees) + '.png'
+    name = "average_2_" + str(amount_of_trees) + '.png'
 
     plt.savefig(name)
     plt.show()
