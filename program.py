@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 import children    
 import print_function
 
+
+
 if __name__ == "__main__":
     
     photo_number = 12
@@ -41,7 +43,7 @@ if __name__ == "__main__":
     
     # making lists for showing 
     x_generation_number = []
-    y_average_of_each = []
+    y_average_mae_of_each = []
     y_best_mae_of_each = []
     y_best_mae_of_all = []
     y_best_tree = []
@@ -60,7 +62,7 @@ if __name__ == "__main__":
         y_min_mae = min(y_best_mae_of_each)
         print("best mae so far: ", y_min_mae)
         y_best_mae_of_all.append(y_min_mae)
-        y_average_of_each.append(average_mae)
+        y_average_mae_of_each.append(average_mae)
 
     final_best_tree = None
     for i in y_best_tree:
@@ -88,7 +90,7 @@ if __name__ == "__main__":
     # print()
     
     fig, ax = plt.subplots()
-    average_of_each, = plt.plot(x_generation_number, y_average_of_each, label='average of each generation')
+    average_of_each, = plt.plot(x_generation_number, y_average_mae_of_each, label='average of each generation')
     ax.set_title(f"function = {given_function}, population = {amount_of_trees}")
     ax.legend(handles=[average_of_each])
     name = f"average_{photo_number}_" + str(amount_of_trees) + '.png'
