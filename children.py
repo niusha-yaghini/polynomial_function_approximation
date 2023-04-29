@@ -76,8 +76,8 @@ def cross_over(parent1, parent2, pc):
         
         replace_nodes(child1.root, choosed_node1, child2.root, choosed_node2)
 
-        child1.print_tree()
-        child2.print_tree()
+        # child1.print_tree()
+        # child2.print_tree()
 
         return child1, child2
     
@@ -135,7 +135,7 @@ def mutation(children, pm):
             
             change_node(child.root, choosed_node)
             
-            child.print_tree()
+            # child.print_tree()
          
 def make_list_node_leaf(root, leaf_nodes):
     # making a list of leaf nodes in our tree
@@ -162,7 +162,7 @@ def mutation_leaf(children, pm):
             
             change_node(child.root, choosed_node)
             
-            child.print_tree()        
+            # child.print_tree()        
           
 def making_children(parent_trees, k, pc, pm):
     # we want to make children on base of a list of trees (parent_trees)

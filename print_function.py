@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import tree
 
+
 def result(t, list_x):    
     trees_y = []
     for single_x in list_x:

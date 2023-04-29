@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 
+
 columns = ['tree','mae']
 
 tree = []
@@ -12,4 +13,3 @@ def printing(tree_mae):
         tree.append(i[0])
         mae.append(i[1])
     df = pd.DataFrame(list(zip(tree, mae)), columns=columns)
-    

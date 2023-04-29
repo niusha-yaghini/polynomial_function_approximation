@@ -3,6 +3,7 @@ from sklearn.metrics import mean_squared_error
 import math
 import numpy as np
 
+
 # choosing the operator
 def my_operator():
     op = ['+', '-', '*', '**']
@@ -37,7 +38,7 @@ class Tree:
     def __init__(self, _max_depth = None):
         self.max_depth = _max_depth
         self.root = None
-        self.in_order = None
+        # self.in_order = None
         self.mae = None
         self.power_l = power_list()
         self.coefficient_l = coefficient_list()
@@ -79,29 +80,29 @@ class Tree:
             n.is_leaf = True
         return n          
 
-    def print_tree(self):
-        # making the inorder show of our tree
-        self.in_order = self.to_math_string(self.root)
+    # def print_tree(self):
+    #     # making the inorder show of our tree
+    #     self.in_order = self.to_math_string(self.root)
    
-    def to_math_string(self, node):
-        if(node.is_leaf):
-            if(node.operator!='x'):
-                a = format(float(node.operator), ".2f")
-                return f"{a}"
-            else:
-                return f"{node.operator}"
+def to_math_string(node):
+    if(node.is_leaf):
+        if(node.operator!='x'):
+            a = format(float(node.operator), ".2f")
+            return f"{a}"
         else:
-            if(len(node.children)) == 1:
-                return f"{node.operator}{self.to_math_string(node.children[0])}"
-            else:
-                return f"{self.to_math_string(node.children[0])}{node.operator}{self.to_math_string(node.children[1])}"
+            return f"{node.operator}"
+    else:
+        if(len(node.children)) == 1:
+            return f"{node.operator}{to_math_string(node.children[0])}"
+        else:
+            return f"{to_math_string(node.children[0])}{node.operator}{to_math_string(node.children[1])}"
 
 def tree_making(max_depth):  
     # making each of our trees
 
     t = Tree(max_depth)
     t._fit()
-    t.print_tree()
+    # t.print_tree()
     return t     
         
 def all_trees(amount, max_depth):

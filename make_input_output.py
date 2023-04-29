@@ -1,4 +1,3 @@
-
 def making_x_compare(domain, stop_size):
     x = []
     i = domain[0]
