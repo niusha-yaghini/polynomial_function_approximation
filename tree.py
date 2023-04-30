@@ -48,6 +48,39 @@ class Tree:
         
     def _grow_tree(self, max_depth, CS=2):
         
+        depth = random.randint(0, max_depth)
+        
+        # choosing the operator for current node
+        x = my_operator()
+        
+        children = []
+        
+        # building the tree base on current depth and children needed
+        if(depth==0):
+            x = random.choice(self.coefficient_l)
+        else:
+            if(x=='**'):
+                n1 = Node(0, 'x', [])
+                n1.is_leaf = True
+                n2 = Node(0, random.choice(self.power_l), [])
+                n2.is_leaf = True
+                
+                children.append(n1)
+                children.append(n2)
+                
+                depth = 1
+            else:
+                for i in range(CS):
+                    children.append(self._grow_tree(depth-1))
+
+        # making the node 
+        n = Node(depth, x, children)
+        if(depth==0):
+            n.is_leaf = True
+        return n          
+
+    def _grow_tree_size_changer(self, max_depth, CS=2):
+        
         # choosing a random depth each time (between 0 to max given depth)
         depth = random.randint(0, max_depth)
           

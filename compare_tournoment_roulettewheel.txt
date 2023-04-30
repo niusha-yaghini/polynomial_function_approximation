@@ -1,5 +1,14 @@
-tournoment 
+(40 iteration, 100 pop-size, 50 generation)
 
+tournoment 
+average is: 660.2785828906833
+
+roulette wheel 
+average is: 2076.841639862535
+
+------------------------------------------------
+
+tournoment 
 best mae of iteration 0 is:  320.26118765608925
 best mae of iteration 1 is:  953.2489772147899
 best mae of iteration 2 is:  864.1114377087652
@@ -43,7 +52,6 @@ best mae of iteration 39 is: 814.1899351857385
 average is: 660.2785828906833
 
 roulette wheel 
-
 best mae of iteration 0 is:  1739.4579473234587
 best mae of iteration 1 is:  1293.0744639999903
 best mae of iteration 2 is:  2532.9484590949414
@@ -85,6 +93,3 @@ best mae of iteration 37 is: 1106.6488328999874
 best mae of iteration 38 is: 1617.1251284947161
 best mae of iteration 39 is: 625.7741385151137
 average is: 2076.841639862535
-
-
-(40 iteration, 100 pop-size, 50 generation)

@@ -1,0 +1,58 @@
+(20 iteration, 100 pop-size, 50 generation)
+
+completed tree max depth = 3 
+uncompleted tree max depth = 12 
+
+completed:
+average is: 605.5130963150168
+
+uncompleted:
+average is: 1973.4573131452926
+
+------------------------------------------------
+
+completed:
+best mae of iteration 0 is: 724.9762048634252
+best mae of iteration 1 is: 346.6262779408202
+best mae of iteration 2 is: 689.8570620388211
+best mae of iteration 3 is: 484.627656764838
+best mae of iteration 4 is: 265.5365840152649
+best mae of iteration 5 is: 195.9035229650264
+best mae of iteration 6 is: 1621.8917912764998
+best mae of iteration 7 is: 1758.4886778783093
+best mae of iteration 8 is: 844.7535923772391
+best mae of iteration 9 is: 183.82211711720788
+best mae of iteration 10 is: 319.4581332780188
+best mae of iteration 11 is: 561.775788278896
+best mae of iteration 12 is: 269.29897297045335
+best mae of iteration 13 is: 230.9799308472236
+best mae of iteration 14 is: 802.4234263565718
+best mae of iteration 15 is: 309.4479918849056
+best mae of iteration 16 is: 964.2563377078777
+best mae of iteration 17 is: 978.0066819999935
+best mae of iteration 18 is: 374.3090586217357
+best mae of iteration 19 is: 183.8221171172077
+average is: 605.5130963150168
+
+uncompleted:
+best mae of iteration 0 is: 477.73964653817814
+best mae of iteration 1 is: 536.8164941346215
+best mae of iteration 2 is: 1022.1493857318716
+best mae of iteration 3 is: 1903.8034360895656
+best mae of iteration 4 is: 1622.9829764327355
+best mae of iteration 5 is: 369.2775106784359
+best mae of iteration 6 is: 4094.2746379557675
+best mae of iteration 7 is: 2654.1730231557326
+best mae of iteration 8 is: 895.0176329991117
+best mae of iteration 9 is: 917.5942069606734
+best mae of iteration 10 is: 5562.385673619129
+best mae of iteration 11 is: 617.2479593070243
+best mae of iteration 12 is: 2305.0962251685924
+best mae of iteration 13 is: 3285.934180000007
+best mae of iteration 14 is: 3505.6619988236703
+best mae of iteration 15 is: 1759.778875443841
+best mae of iteration 16 is: 2306.8607738912256
+best mae of iteration 17 is: 3433.573719695012
+best mae of iteration 18 is: 1068.5303739487658
+best mae of iteration 19 is: 1130.2475323318881
+average is: 1973.4573131452926
