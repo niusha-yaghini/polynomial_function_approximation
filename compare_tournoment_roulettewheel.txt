@@ -1,0 +1,90 @@
+tournoment 
+
+best mae of iteration 0 is:  320.26118765608925
+best mae of iteration 1 is:  953.2489772147899
+best mae of iteration 2 is:  864.1114377087652
+best mae of iteration 3 is:  985.7246234043264
+best mae of iteration 4 is:  708.1886811336344
+best mae of iteration 5 is:  575.3893627070751
+best mae of iteration 6 is:  1180.3917277997132
+best mae of iteration 7 is:  500.8491086059111
+best mae of iteration 8 is:  419.29379776898963
+best mae of iteration 9 is:  446.96563661809364
+best mae of iteration 10 is: 207.07120825705468
+best mae of iteration 11 is: 547.9422556055648
+best mae of iteration 12 is: 515.939649539056
+best mae of iteration 13 is: 607.6706375975829
+best mae of iteration 14 is: 241.49833743663538
+best mae of iteration 15 is: 1016.7696570372125
+best mae of iteration 16 is: 807.2935840165618
+best mae of iteration 17 is: 1041.7290777862447
+best mae of iteration 18 is: 617.1218353799363
+best mae of iteration 19 is: 940.4837529523304
+best mae of iteration 20 is: 643.0349011507756
+best mae of iteration 21 is: 350.281710340767
+best mae of iteration 22 is: 177.7358709021863
+best mae of iteration 23 is: 299.994800725174
+best mae of iteration 24 is: 537.0281840936796
+best mae of iteration 25 is: 908.8469794538862
+best mae of iteration 26 is: 716.7279002672615
+best mae of iteration 27 is: 841.1416314321593
+best mae of iteration 28 is: 582.4635880266809
+best mae of iteration 29 is: 1090.5102531437237
+best mae of iteration 30 is: 591.4242841219838
+best mae of iteration 31 is: 952.1116613232705
+best mae of iteration 32 is: 490.8454052881279
+best mae of iteration 33 is: 1705.649336080128
+best mae of iteration 34 is: 447.7245996308066
+best mae of iteration 35 is: 444.2737083963504
+best mae of iteration 36 is: 395.6861997185294
+best mae of iteration 37 is: 477.6341433578179
+best mae of iteration 38 is: 445.89368676272255
+best mae of iteration 39 is: 814.1899351857385
+average is: 660.2785828906833
+
+roulette wheel 
+
+best mae of iteration 0 is:  1739.4579473234587
+best mae of iteration 1 is:  1293.0744639999903
+best mae of iteration 2 is:  2532.9484590949414
+best mae of iteration 3 is:  1268.5098668848027
+best mae of iteration 4 is:  2368.168525935113
+best mae of iteration 5 is:  3135.2328544029674
+best mae of iteration 6 is:  972.4792407251022
+best mae of iteration 7 is:  417.4758612797585
+best mae of iteration 8 is:  1075.4093457416204
+best mae of iteration 9 is:  1523.6788422621116
+best mae of iteration 10 is: 295.0170884728761
+best mae of iteration 11 is: 349.84612521074314
+best mae of iteration 12 is: 2857.065039925277
+best mae of iteration 13 is: 733.1300751131296
+best mae of iteration 14 is: 5562.385673619129
+best mae of iteration 15 is: 4260.971446094034
+best mae of iteration 16 is: 2353.3623544669526
+best mae of iteration 17 is: 1443.4067220744453
+best mae of iteration 18 is: 267.74108842857936
+best mae of iteration 19 is: 1665.421217425108
+best mae of iteration 20 is: 2797.974207999973
+best mae of iteration 21 is: 8293.848344031463
+best mae of iteration 22 is: 1741.4632064314333
+best mae of iteration 23 is: 1411.2277399999857
+best mae of iteration 24 is: 1340.406520023343
+best mae of iteration 25 is: 1351.4003199999945
+best mae of iteration 26 is: 2898.477556630008
+best mae of iteration 27 is: 3355.738213956489
+best mae of iteration 28 is: 1772.9999313981255
+best mae of iteration 29 is: 895.2727023680287
+best mae of iteration 30 is: 1541.8392120000003
+best mae of iteration 31 is: 1537.9132374043197
+best mae of iteration 32 is: 2493.4142587444126
+best mae of iteration 33 is: 2974.225087597355
+best mae of iteration 34 is: 6800.675454789415
+best mae of iteration 35 is: 780.5674714606014
+best mae of iteration 36 is: 1621.8917912765048
+best mae of iteration 37 is: 1106.6488328999874
+best mae of iteration 38 is: 1617.1251284947161
+best mae of iteration 39 is: 625.7741385151137
+average is: 2076.841639862535
+
+
+(40 iteration, 100 pop-size, 50 generation)
