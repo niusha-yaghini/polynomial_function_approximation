@@ -1,5 +1,5 @@
 (20 iteration, 100 pop-size, 50 generation)
-(with tournoment wheel)
+(with tournoment method)
 
 completed tree max depth = 3 
 uncompleted tree max depth = 12 
