@@ -2,6 +2,7 @@ import tree
 import matplotlib.pyplot as plt
 import children    
 import print_function
+import random as rnd
 
 
 def draw_average_mae(x_generation_number, y_average_mae_of_each, given_function):
@@ -28,6 +29,10 @@ def draw_best_mae(x_generation_number, y_best_mae_of_each, y_best_mae_of_all, gi
 
     plt.savefig(name)
     plt.show()
+
+def Termination_condition(y_min_mae):
+    if(y_min_mae<0.0001): return True
+    else: return False
 
 def Genetic(input_file_name):
     
@@ -57,10 +62,15 @@ def Genetic(input_file_name):
     x_generation_number.append(0)
     y_average_mae_of_each.append(parents_average_mae)
     y_best_mae_of_each.append(parents_best_mae)
+    y_min_mae = min(y_best_mae_of_each)
+    print("best mae so far: ", y_min_mae)
     y_best_mae_of_all.append(parents_best_mae)
     y_best_tree.append(best_parent_tree)
 
     for i in range(amount_of_generations):
+        
+        if(Termination_condition(y_min_mae)):
+            return
     
         print(f"population number {i+1}")
         list_of_children = children.making_children(list_of_parents, k, pc, pm)
@@ -91,18 +101,20 @@ def Genetic(input_file_name):
 
 if __name__ == "__main__":
     
-    photo_number = 12
+    rnd.seed(1)
+    
+    photo_number = 13
     
     # parameters
     amount = 100
 
     # population size (0)
     amount_of_trees = 100
-    max_depth = 12
+    max_depth = 6
 
     k = 3 # k tournoment parameter
     pc = 0.8 # the probblity of cross-over
-    pm = 0.8 # the probblity of mutation
+    pm = 0.8 # the probblity of mutation(leaf_mutation)
 
     amount_of_generations = 50
     

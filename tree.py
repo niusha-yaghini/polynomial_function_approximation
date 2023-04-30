@@ -144,7 +144,8 @@ def calculator(root, x, flag):
                 try:
                     return left_val**right_val
                 except:
-                    print()
+                    flag = True
+                    return 1
         
 def mean_abs_error(actual_y, predicted_y):
     amount = len(predicted_y)
@@ -155,12 +156,13 @@ def mean_abs_error(actual_y, predicted_y):
         
 def _mae(tree, list_x, list_y):
     # calculating each tree mae with given inputs and outputs
+    #here mae is our fitness
     
     trees_y = []
     for single_x in list_x:
         flag = False
         t_y = calculator(tree.root, single_x, flag)
-        if(flag==True or t_y>100000 or t_y<-100000):
+        if(flag==True or math.isnan(t_y) or t_y>100000 or t_y<-100000):
             t_y = 100000
 
         trees_y.append(t_y)

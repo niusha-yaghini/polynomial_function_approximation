@@ -84,21 +84,62 @@ def cross_over(parent1, parent2, pc):
     else:
         return parent1, parent2
                    
-def tournament(p_trees, k):
+def tournament_selection(p_trees, k):
     # using the tournament preceture for selecting a couple tree
     # in this method we choose 3 tree randomly 2 times (2 times becuase we want a couple), and select the best-mae tree
     
     couple_parent = []
+    
     for j in range(2):
         best_mae = float('inf')
         best_tree = None
         for z in range(k):
             t = rnd.choice(p_trees)  
+            
             if(t.mae<best_mae):
                 best_mae = t.mae
-                best_tree = t
+                best_tree = t        
         couple_parent.append(best_tree)
     return couple_parent[0], couple_parent[1]       
+        
+def roulette_wheel_selection(p_trees):
+    # how much the mae is smaller the probbility of choosing it increases
+    
+    couple_parent = []
+    
+    for i in range(2):
+
+        # [print(1/t.mae+1) for t in p_trees]
+        sum_mae = sum([(1/(t.mae+1)) for t in p_trees])
+        # sum_mae = 0
+        # for i in p_trees:
+        #     # print("1/(i.mae+1)", 1/(i.mae+1))
+        #     print(i.mae)
+        #     sum_mae += 1/(i.mae+1)
+        #     print("sum_mae", sum_mae)
+
+        # print("should be 1", sum([((1/t.mae+1)/sum_mae) for t in p_trees]))
+        
+        #this is going to choose a number between 0 and 1    
+        p = rnd.random()
+        s = 0
+        
+        flag = True
+        for t in p_trees:
+            if(flag):
+                # print("(((1/t.mae+1) / sum_mae) + s)", (((1/(t.mae+1)) / sum_mae) + s))
+                if(p < (((1/(t.mae+1)) / sum_mae) + s)):
+                    couple_parent.append(t)
+                    flag = False
+                else:
+                    s += (1/(t.mae+1))/sum_mae    
+                    # print("s = ", s)
+        # if(len(couple_parent)==0):
+        #     print()
+    # try:
+    return couple_parent[0], couple_parent[1]       
+    # except:
+        # print()
         
 def change_node(root, choosed_node):
 
@@ -122,7 +163,8 @@ def change_node(root, choosed_node):
             node.is_leaf = t.root.is_leaf
             flag = False
           
-def mutation(children, pm):
+def subtree_mutation(children, pm):
+    
     for child in children:
         x = rnd.random()
         if(x<=pm):
@@ -149,7 +191,7 @@ def make_list_node_leaf(root, leaf_nodes):
                 
     return leaf_nodes
 
-def mutation_leaf(children, pm):
+def leaf_mutation(children, pm):
     for child in children:
         x = rnd.random()
         if(x<=pm):
@@ -172,12 +214,15 @@ def making_children(parent_trees, k, pc, pm):
     
     for i in range(int(lenght/2)):
         #returning a couple of parents
-        parent1, parent2 = tournament(parent_trees, k)        
+        # parent1, parent2 = tournament_selection(parent_trees, k)        
+
+        parent1, parent2 = roulette_wheel_selection(parent_trees)        
+
         # we pass our couple to cross-over function(that 'pc' percent will do it)
         child1, child2 = cross_over(parent1, parent2, pc)
         children.append(child1)
         children.append(child2)
     
-    mutation_leaf(children, pm)
+    leaf_mutation(children, pm)
     
     return children
