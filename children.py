@@ -214,9 +214,9 @@ def making_children(parent_trees, k, pc, pm):
     
     for i in range(int(lenght/2)):
         #returning a couple of parents
-        # parent1, parent2 = tournament_selection(parent_trees, k)        
+        parent1, parent2 = tournament_selection(parent_trees, k)        
 
-        parent1, parent2 = roulette_wheel_selection(parent_trees)        
+        # parent1, parent2 = roulette_wheel_selection(parent_trees)        
 
         # we pass our couple to cross-over function(that 'pc' percent will do it)
         child1, child2 = cross_over(parent1, parent2, pc)

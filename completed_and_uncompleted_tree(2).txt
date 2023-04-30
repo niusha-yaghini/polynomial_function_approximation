@@ -1,0 +1,59 @@
+(20 iteration, 100 pop-size, 50 generation)
+(with tournoment wheel)
+
+completed tree max depth = 3 
+uncompleted tree max depth = 12 
+
+completed:
+average is: 533.8029806946208
+
+uncompleted:
+average is: 685.9470582711427
+
+------------------------------------------------
+
+uncompleted:
+best mae of iteration 0 is: 256.5361396204869
+best mae of iteration 1 is: 1246.1729176281945
+best mae of iteration 2 is: 334.49390131206883
+best mae of iteration 3 is: 716.7410209425798
+best mae of iteration 4 is: 321.3880209917236
+best mae of iteration 5 is: 975.1849299218604
+best mae of iteration 6 is: 207.90370258470801
+best mae of iteration 7 is: 1298.4468679999877
+best mae of iteration 8 is: 339.10246218150104
+best mae of iteration 9 is: 867.2144813748959
+best mae of iteration 10 is: 1257.1740708665384
+best mae of iteration 11 is: 373.1342115351703
+best mae of iteration 12 is: 181.17074989287016
+best mae of iteration 13 is: 1084.402257294714
+best mae of iteration 14 is: 918.0711876171321
+best mae of iteration 15 is: 410.4467585335973
+best mae of iteration 16 is: 325.9979054502394
+best mae of iteration 17 is: 470.9591654805746
+best mae of iteration 18 is: 1006.9919381693891
+best mae of iteration 19 is: 1127.408476024623
+average is: 685.9470582711427
+
+completed:
+best mae of iteration 0 is: 368.5154316416673
+best mae of iteration 1 is: 455.1269107657
+best mae of iteration 2 is: 1204.6402436019978
+best mae of iteration 3 is: 850.5202510875675
+best mae of iteration 4 is: 193.81533485478633
+best mae of iteration 5 is: 389.3404302159109
+best mae of iteration 6 is: 332.3950107113848
+best mae of iteration 7 is: 199.2518959732696
+best mae of iteration 8 is: 277.5099142378116
+best mae of iteration 9 is: 493.6262990434953
+best mae of iteration 10 is: 1020.3907397697348
+best mae of iteration 11 is: 489.9235317010731
+best mae of iteration 12 is: 366.89967559842216
+best mae of iteration 13 is: 605.4088235818336
+best mae of iteration 14 is: 230.19500100000604
+best mae of iteration 15 is: 620.7716401564979
+best mae of iteration 16 is: 196.68409914534018
+best mae of iteration 17 is: 846.4415359596361
+best mae of iteration 18 is: 887.5734459244285
+best mae of iteration 19 is: 647.0293989218518
+average is: 533.8029806946208

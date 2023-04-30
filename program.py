@@ -244,7 +244,7 @@ if __name__ == "__main__":
 
     # population size (0)
     population_size = 100
-    max_depth = 12
+    max_depth = 3
 
     k = 3 # k tournoment parameter
     pc = 0.8 # the probblity of cross-over
@@ -256,7 +256,6 @@ if __name__ == "__main__":
     
     iteration = 20
     compare_completed_and_uncompleted_tree(input_file_name, iteration)
-    
     
     
     # max_depth_domain = (1, 11)
