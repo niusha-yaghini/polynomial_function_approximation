@@ -1,4 +1,4 @@
-(40 iteration, 100 pop-size, 50 generation)
+(40 iteration, 1000 pop-size, 50 generation)
 
 tournoment 
 average is: 660.2785828906833
